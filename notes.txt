@@ -1,0 +1,11 @@
+"This example showcases the new Jenkins Pipeline integration in OpenShift, which performs continuous integration and deployment right on the platform. The template contains a Jenkinsfile - a definition of a multi-stage CI/CD process - that leverages the underlying OpenShift platform for dynamic and scalable builds. OpenShift integrates the status of your pipeline builds into the web console allowing you to see your entire application lifecycle in a single view.",
+deleted:-inbuildconfig- strategy -from-
+"env": [
+                            {
+                                "name": "NPM_MIRROR",
+                                "value": "${NPM_MIRROR}"
+                            }
+in trigger-after triggers
+"postCommit": {
+                    "script": "npm test"
+                }
